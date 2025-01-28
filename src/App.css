@@ -1,0 +1,177 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: #e5e5e5;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.page {
+  min-width: 600px;
+  margin: 0 auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.post, .edit-post {
+  background-color: #ffffff;
+  border-bottom: 1px solid #b5b5b5;
+}
+
+.article__buttons {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+.author {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.author__avatar {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.user__avatar {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.author__description {
+  text-align: left;
+}
+
+.author__name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.author__data {
+  display: flex;
+  gap: 10px;
+  color: #767676;
+}
+
+.author__data_detailing {
+  font-weight: bold;
+}
+
+.post__paragraph {
+  margin: 0;
+  padding: 10px;
+  padding-bottom: 20px;
+  font-size: 24px;
+}
+
+.post__actions {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #b5b5b5;
+}
+
+.post__comment, .edit-post__text {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #b5b5b5;
+  border-radius: 18px;
+}
+
+.btn__ok {
+  color: #ffffff;
+  background-color: #4a51cd;
+}
+
+.btn__action {
+  background-color: #ffffff;
+}
+
+.btn__delete {
+  color: #ffffff;
+  background-color: #c52929;
+}
+
+.new {
+  background-color: #ffffff;
+}
+
+.new__text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.new__menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+textarea {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #b5b5b5;
+  border-radius: 18px;
+}
+
+a {
+  color: inherit;
+}
