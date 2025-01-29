@@ -22,8 +22,8 @@ export default function Post({ user, post }) {
       </Link>
 
       <div className="post__actions">
-        <button className="btn__action">Нравится</button>
-        <button className="btn__action">Комментировать</button>
+        <button type='button' className="btn__action">Нравится</button>
+        <button type='button' className="btn__action">Комментировать</button>
       </div>
     </article>
   );

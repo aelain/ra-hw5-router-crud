@@ -1,16 +1,20 @@
 import PropTypes from 'prop-types';
 import Post from "./Post";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import createRequest from '../createRequest';
 
 export default function HomePage({ user }) {
-  const data = createRequest({
-    url: 'http://localhost:7070/posts',
-    method: 'GET',
-  });
+  const [posts, setPosts] = useState([]);
 
-  const [posts, setPosts] = useState(data);
+  useEffect(() => {
+      createRequest({
+        url: 'http://localhost:7070/posts',
+        method: 'GET',
+      }).then(data => {
+        setPosts(data);
+      });
+    }, [setPosts]);
 
   return (
     <main>

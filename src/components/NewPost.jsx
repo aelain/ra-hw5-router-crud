@@ -1,14 +1,16 @@
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import createRequest from '../createRequest';
 
 export default function NewPost({ user }) {
+  const navigate = useNavigate();
+
   const handleSubmit = event => {
     event.preventDefault();
     const { target } = event;
     const formData = new FormData(target);
     formData.append('id', 0);
-    formData.append('created', new Date());
+    formData.append('created', new Date().toLocaleString());
     const data = Object.fromEntries(formData);
     data.content = data.content.replace(/[<>{}]/g, '');
 
@@ -20,12 +22,13 @@ export default function NewPost({ user }) {
       },
       body: JSON.stringify(data),
     });
+
     event.target.reset();
-    window.location.assign('/');
+    navigate('/');
   };
 
   return (
-    <form className="new" onSubmit={event => handleSubmit(event)}>
+    <form className="new" onSubmit={handleSubmit}>
       <ul className="new__menu">
         <li>Публикация</li>
         <li>Фото/видео</li>

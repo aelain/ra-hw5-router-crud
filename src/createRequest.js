@@ -4,8 +4,7 @@ export default async function createRequest(options = {}) {
     const response = await fetch(url, options);
 
     if (options.method === 'GET') {
-      const data = await response.json();
-      return data;
+      return await response.json();
     }
   } catch (error) {
     console.error(error);
